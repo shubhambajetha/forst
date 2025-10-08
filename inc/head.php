@@ -40,3 +40,4 @@ if (!function_exists('asset')) {
     <link rel="stylesheet" href="<?php echo asset("assets/css/" . $page_css . ".css"); ?>">
     <?php endif; ?>
 </head>
+
