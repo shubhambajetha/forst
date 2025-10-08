@@ -1,13 +1,16 @@
 <script src="<?php echo asset('assets/plugins/Jquery/jquery.min.js'); ?>"></script>
 <script src="./assets/js/function.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
  <link rel="stylesheet" href="./assets/css/header.css">
+ <link rel="stylesheet" href="./assets/css/media.css">
 
  <!-- header -->
   <nav class="navbar navbar-expand-lg bg-white">
             <div class="container-fluid p-2 align-items-center">
 
                 <a class="navbar-brand ms-2" href="#">
-                    <img src="assets/img/logo copy.svg" alt="ashtech presidential logo" class="img-fluid">
+                    <img src="assets/img/logo.png" alt="ashtech presidential logo" class="img-fluid">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -17,7 +20,7 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-center align-items-center"
                     id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0 gap-2">
+                    <ul class="navbar-nav ms-auto fw-bold mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">Overview</a>
                         </li>
@@ -26,7 +29,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">AMENITIES</a>
+                            <a class="nav-link active" href="#">Amenities</a>
                         </li>
 
                         <li class="nav-item">
@@ -37,7 +40,7 @@
                             <a class="nav-link active" href="#">Floor Plans</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">GALLARY</a>
+                            <a class="nav-link active" href="#">Gallary</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="#">Developer</a>
@@ -45,7 +48,7 @@
 
                     </ul>
 
-                    <button class="btn contact-btn btn-outline-dark  text-white mx-3" type="submit">CONTACT US</button>
+                    <button class="btn contact-btn btn-outline-dark  text-white mx-3" type="submit">Contact Us</button>
 
                 </div>
             </div>
