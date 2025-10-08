@@ -1,0 +1,29 @@
+Header always set X-Frame-Options "SAMEORIGIN"
+Header set X-Content-Type-Options "nosniff"
+Header set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    RewriteCond %{REQUEST_URI} ^/(overview|highlights|amenities|developer|location|floor-plans|pricing|FAQs|contact-us)$ [NC]
+    RewriteRule ^ /index.php [L]
+
+    RewriteCond %{THE_REQUEST} \s/(index(\.php)?)\s [NC]
+    RewriteRule ^index(\.php)?$ / [R=301,L]
+
+    RewriteCond %{THE_REQUEST} \s/([^.]+)\.php[\s?] [NC]
+    RewriteRule ^ /%1 [R=301,L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^\.]+)$ $1.php [L,QSA]
+
+    RewriteCond %{REQUEST_URI} \.(css|js|png|jpg|jpeg|gif|ico|svg|webp|woff|woff2|ttf|otf|eot)$ [NC]
+    RewriteRule ^ - [L]
+</IfModule>
+
+<FilesMatch "\.(pdf)$">
+    Require all denied
+</FilesMatch>
