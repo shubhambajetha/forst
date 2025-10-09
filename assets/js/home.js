@@ -34,6 +34,47 @@ arrowRight.addEventListener('click', nextSlide);
 setInterval(nextSlide, 5000);
 
 
+const faqItems = document.querySelectorAll('.faq-item');
+
+// for faq
+faqItems.forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+        item.classList.toggle('active');
+        const answer = item.querySelector('.faq-answer');
+        if (item.classList.contains('active')) {
+            answer.style.display = 'block';
+        } else {
+            answer.style.display = 'none';
+        }
+    });
+});
 
 
+// for contact form 
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
+    // Show success message
+    const successMessage = document.getElementById('successMessage');
+    successMessage.classList.add('show');
+
+    // Reset form
+    this.reset();
+
+    // Hide success message after 5 seconds
+    setTimeout(() => {
+        successMessage.classList.remove('show');
+    }, 5000);
+});
+
+// Add smooth animations for form inputs
+const inputs = document.querySelectorAll('input, textarea, select');
+inputs.forEach(input => {
+    input.addEventListener('focus', function () {
+        this.parentElement.style.transform = 'translateY(-2px)';
+    });
+
+    input.addEventListener('blur', function () {
+        this.parentElement.style.transform = 'translateY(0)';
+    });
+});
