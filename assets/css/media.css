@@ -47,3 +47,10 @@ main {
   }
 }
 
+/* overview  responsive */
+
+@media (max-width: 767px) {
+  #overview .col-md-6:first-child { padding: 0 15px; }
+  .overview-card h6 { font-size: 16px; }
+  .section-title { font-size: 26px; }
+}

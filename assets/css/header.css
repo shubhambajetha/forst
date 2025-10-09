@@ -2,10 +2,14 @@
   background: var(--white);
   box-shadow: var(--shadow-soft);
   transition: var(--transition);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1030;
   padding: 0.1rem 1rem;
+  
 }
 
 .nav-link {
